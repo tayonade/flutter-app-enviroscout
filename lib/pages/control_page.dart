@@ -38,6 +38,13 @@ class _controlPageState extends State<controlPage> {
       setState(() {
         statusMessage = 'Connection failed: $e';
       });
+      /*    // Add CORS headers
+    AsyncWebServerResponse *response = request->beginResponse(200, "text/plain", "OK");
+    response->addHeader("Access-Control-Allow-Origin", "*");
+    response->addHeader("Access-Control-Allow-Methods", "GET");
+    request->send(response); }); */
+
+    //esp32 harus memberi respon menggunakan cors header
     }
   }
 
@@ -184,3 +191,4 @@ class _controlPageState extends State<controlPage> {
     );
   }
 }
+
